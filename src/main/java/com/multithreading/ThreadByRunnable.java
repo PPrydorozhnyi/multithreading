@@ -3,7 +3,7 @@ package com.multithreading;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class Main {
+public class ThreadByRunnable {
 
     public static void main(String[] args) throws InterruptedException {
         Thread thread = new Thread(
