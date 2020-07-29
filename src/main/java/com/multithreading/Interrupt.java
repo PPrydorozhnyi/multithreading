@@ -4,10 +4,17 @@ import lombok.extern.slf4j.Slf4j;
 
 public class Interrupt {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Thread thread = new Thread(new BlockingTask());
 
         thread.start();
+
+        //then do not need interrupt handling
+//        thread.setDaemon(true);
+
+        Thread.sleep(100);
+
+        thread.join(200);
 
         thread.interrupt();
 
